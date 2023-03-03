@@ -24,10 +24,9 @@
                         v-model="registerForm.username" required class="form-field">
                 </div>
                 <div class="form-control">
-                    <font-awesome-icon class="ifa" icon="fa fa-calendar-days" /> 
-                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                        placeholder="Date of Birth" aria-label="Date of Birth" name="dob" v-model="registerForm.dob"
-                        required class="form-field">
+                    <font-awesome-icon class="ifa" icon="fa fa-calendar-days" />
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Date of Birth"
+                        aria-label="Date of Birth" name="dob" v-model="registerForm.dob" required class="form-field">
                 </div>
                 <div class="form-control">
                     <font-awesome-icon class="ifa" icon="fa fa-lock" />
@@ -58,9 +57,9 @@ export default {
 
         }
     },
-    beforeMount(){
-    if (localStorage.getItem('userid'))
-      this.$router.push({ path: '/dashboard' });
+    beforeMount() {
+        if (localStorage.getItem('userid'))
+            this.$router.push({ path: '/dashboard' });
     },
     methods: {
         showPassword() {

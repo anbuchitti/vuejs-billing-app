@@ -2,8 +2,8 @@
     <div class="container">
         <dashboard-header></dashboard-header>
         <div class="list-item">
-            <li class="card-item"><router-link to="/expense-record">Account Type</router-link></li>
-            <li class="card-item"><router-link to="/expense-record">Income Generate</router-link></li>
+            <li class="card-item"><router-link to="/account-type">Account Type</router-link></li>
+            <li class="card-item"><router-link to="/expense-generator">Income Generate</router-link></li>
             <li class="card-item"><router-link to="/expense-generator">Expense Generate</router-link></li>
             <li class="card-item"><router-link to="/expense-record">Income Record</router-link></li>
             <li class="card-item"><router-link to="/expense-record">Expense Record</router-link></li>

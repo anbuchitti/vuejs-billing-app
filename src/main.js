@@ -5,12 +5,15 @@ import Login from './pages/login.vue'
 import Register from './pages/register.vue'
 import Home from './pages/home.vue'
 import Dashboard from './pages/dashboard.vue';
+import AccountType from './pages/account-type.vue'
 import ExpenseRecord from './pages/expense-record.vue';
 import ExpenseGenerator from './pages/expense-generate.vue';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
-library.add(faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays);
+import { 
+    faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays, faPencilAlt, faTrashAlt 
+} from '@fortawesome/free-solid-svg-icons'
+library.add(faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays, faPencilAlt, faTrashAlt);
 
 const routes = [
     {
@@ -24,6 +27,10 @@ const routes = [
     {
         path: '/register',
         component: Register
+    },
+    {
+        path: '/account-type',
+        component: AccountType
     },
     {
         path: '/dashboard',

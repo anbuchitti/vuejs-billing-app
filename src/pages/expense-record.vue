@@ -25,7 +25,7 @@ import { getallexpenseRecord } from './../../common/api-call';
 import DashboardHeader from './../components/dashboard-header.vue';
 
 export default {
-    name: 'Expense-Record',
+    name: 'expense-record',
     components: {
         'expense-table': ExpenseTable,
         'dashboard-header': DashboardHeader,

@@ -34,7 +34,7 @@ import { getAllTypename, submitExpense, gettodayexpense } from './../../common/a
 import { format } from 'date-fns';
 
 export default {
-    name: 'Expense-Generator',
+    name: 'expense-generator',
     components: {
         'dashboard-header': DashboardHeader,
         'expense-table' : ExpenseTable
