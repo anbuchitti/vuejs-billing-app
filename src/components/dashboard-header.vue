@@ -1,6 +1,8 @@
 <template>   
    <div class="header">
-        <router-link to="/dashboard"><i class="fa fa-angle-left"></i></router-link>
+        <router-link to="/dashboard">
+            <font-awesome-icon class="ifa" icon="fa fa-angle-left" />
+        </router-link>
         <label class="lgt" @click="LogoutCall()">Logout</label>
    </div>
 </template>

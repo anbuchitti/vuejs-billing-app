@@ -10,7 +10,7 @@ import ExpenseGenerator from './pages/expense-generate.vue';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
-library.add(faMobile, faLock, faEyeSlash, faEye, faAngleLeft,faUser, faCalendarDays);
+library.add(faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays);
 
 const routes = [
     {
