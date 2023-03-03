@@ -22,7 +22,7 @@
 <script>
 import ExpenseTable from '@/components/expense-table.vue';
 import { getallexpenseRecord } from './../../common/api-call';
-import { DashboardHeader } from './../components/dashboard-header.vue';
+import DashboardHeader from './../components/dashboard-header.vue';
 
 export default {
     name: 'Expense-Record',

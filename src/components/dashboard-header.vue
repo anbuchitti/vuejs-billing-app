@@ -12,6 +12,10 @@ export default {
             localStorage.clear();
             this.$router.push('/');
         }
+    },
+    beforeMount() {
+        if(!localStorage.getItem('userid')) 
+            this.LogoutCall();
     }
 }
 </script>

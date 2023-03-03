@@ -14,23 +14,23 @@
         <div class="lower-sec">
             <div class="register-form">
                 <div class="form-control">
-                    <i class="fa fa-user"></i>
+                    <font-awesome-icon class="ifa" icon="fa fa-user" />
                     <input type="text" placeholder="First Name" aria-label="First Name" name="First Name"
                         v-model="registerForm.firstname" required autofocus class="form-field">
                 </div>
                 <div class="form-control">
-                    <i class="fa fa-mobile"></i>
+                    <font-awesome-icon class="ifa" icon="fa fa-mobile" />
                     <input type="number" placeholder="Mobile Number" aria-label="Mobile Number" name="mobileno"
                         v-model="registerForm.username" required class="form-field">
                 </div>
                 <div class="form-control">
-                    <i class="fa fa-calendar"></i>
+                    <font-awesome-icon class="ifa" icon="fa fa-calendar-days" /> 
                     <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
                         placeholder="Date of Birth" aria-label="Date of Birth" name="dob" v-model="registerForm.dob"
                         required class="form-field">
                 </div>
                 <div class="form-control">
-                    <i class="fa fa-lock"></i>
+                    <font-awesome-icon class="ifa" icon="fa fa-lock" />
                     <input type="password" placeholder="Password" aria-label="Password" name="password"
                         v-model="registerForm.password" required class="form-field">
                     <i class="fa fa-eye-slash" v-if="!ispassicon" @click="showPassword"></i>
@@ -57,6 +57,10 @@ export default {
             }
 
         }
+    },
+    beforeMount(){
+    if (localStorage.getItem('userid'))
+      this.$router.push({ path: '/dashboard' });
     },
     methods: {
         showPassword() {

@@ -7,6 +7,10 @@ import Home from './pages/home.vue'
 import Dashboard from './pages/dashboard.vue';
 import ExpenseRecord from './pages/expense-record.vue';
 import ExpenseGenerator from './pages/expense-generate.vue';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faMobile, faLock, faEyeSlash, faEye, faAngleLeft, faUser, faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+library.add(faMobile, faLock, faEyeSlash, faEye, faAngleLeft,faUser, faCalendarDays);
 
 const routes = [
     {
@@ -42,4 +46,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router);
-app.mount('#app')
+app.component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+

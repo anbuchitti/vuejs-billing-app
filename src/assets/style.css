@@ -92,15 +92,15 @@ select:focus {
     padding: 20px;
 }
 
-.fa {
+.svg.svg-inline--fa {
     position: absolute;
     font-size: 20px;
     top: 6px;
     left: 4px;
 }
 
-i.fa.fa-eye,
-i.fa.fa-eye-slash {
+.fa.fa-eye,
+.fa.fa-eye-slash {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -131,15 +131,15 @@ i.fa.fa-eye-slash {
     padding: 0 20px;
 }
 
-.fa {
+.ifa {
     position: absolute;
     font-size: 20px;
     top: 6px;
     left: 4px;
 }
 
-i.fa.fa-eye,
-i.fa.fa-eye-slash {
+.fa-eye,
+.fa-eye-slash {
     position: absolute;
     right: 5px;
     top: 5px;

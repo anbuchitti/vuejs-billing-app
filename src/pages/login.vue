@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="screen-frame">
-      <router-link to="/"><i class="fa fa-angle-left"></i></router-link>
+      <router-link to="/"><font-awesome-icon class="ifa" icon="fa fa-angle-left" /></router-link>
       <div class="upper-sec ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#fff" fill-opacity="1"
@@ -14,16 +14,16 @@
     <div class="lower-sec">
       <div name="login_form" class="login-form">
         <div class="form-control">
-          <i class="fa fa-mobile"></i>
+          <font-awesome-icon class="ifa" icon="fa fa-mobile" />
           <input type="number" placeholder="Mobile Number" aria-label="Mobile Number" name="mobileno"
             v-model="LoginData.username" required class="form-field">
         </div>
         <div class="form-control">
-          <i class="fa fa-lock"></i>
+          <font-awesome-icon class="ifa" icon="fa fa-lock" />
           <input type="password" placeholder="Password" aria-label="Password" name="password"
             v-model="LoginData.password" required class="form-field">
-          <i class="fa fa-eye-slash" v-if="!ispassicon" @click="showPassword"></i>
-          <i class="fa fa-eye" v-if="ispassicon" @click="hidePassword"></i>
+          <font-awesome-icon icon="fa fa-eye-slash" v-if="!ispassicon" @click="showPassword"/>
+          <font-awesome-icon icon="fa fa-eye" v-if="ispassicon" @click="hidePassword"/>
         </div>
         <button class="primary-btn" @click="submitLogin(LoginData)">Login</button>
       </div>
@@ -44,6 +44,10 @@ export default {
       }
     }
   },
+  beforeMount(){
+    if (localStorage.getItem('userid'))
+      this.$router.push({ path: '/dashboard' });
+  },
   methods: {
     showPassword() {
       this.ispassicon = true;
@@ -55,9 +59,9 @@ export default {
     },
     submitLogin(formData) {
       loginCall(formData).then((data) => {
-        if(data.data.error === false){
-          localStorage.setItem('userid',JSON.stringify(formData.username))
-          this.$router.push({path: '/dashboard'}).catch(()=>{});
+        if (data.data.error === false) {
+          localStorage.setItem('userid', JSON.stringify(formData.username))
+          this.$router.push({ path: '/dashboard' }).catch(() => { });
         }
       })
     }
